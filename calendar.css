@@ -1,0 +1,103 @@
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+    padding: 70px 25px;
+    background: #00BFFF;
+    opacity: 0.85;
+    text-align: center;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #00BFFF;
+    opacity: 0.55;
+    font-size: 0;
+
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* Days (1-31) */
+.days {
+    padding-top: 10px;
+    background: #FFFFFB;
+    margin: 0;
+    font-size: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    height: 100px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: black;
+    
+}
+
+/* Highlight the "current" day */
+.days li .active {
+    padding: 12px;
+    background: #00BFFF;
+    opacity: 0.85;
+    color: white !important
+}
+
+#meatballs {
+    background-image: url(http://mittkok.expressen.se/wp-content/uploads/2013/12/kttbullar-recept-700x700.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+#meatballs:hover{
+    opacity: 0.55;
+}
+
+#pancakes {
+    background-image: url(http://images.media-allrecipes.com/userphotos/720x405/3500474.jpg);
+   background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#pancakes:hover {
+    opacity: 0.55;
+}
