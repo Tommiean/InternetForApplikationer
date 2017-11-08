@@ -1,6 +1,11 @@
+h1, h2, p, li {
+    font-family: "Comic Sans MS";
+}
+
 body {
     background-color: white;
     margin: 0;
+ 
 }
 
 ul, li {
@@ -15,6 +20,10 @@ ul, li {
     overflow: hidden;
 }
 
+.navbar {
+        font-family: "Times New Roman", Georgia, Serif; 
+        font-size: 15px;
+}
 
 .navbar ul{
     list-style-type: none;
