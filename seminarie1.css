@@ -1,3 +1,5 @@
+
+
 h1, h2, p, li {
     font-family: "Comic Sans MS";
 }
@@ -90,9 +92,101 @@ li.dropdown {
     color: black;
 }
 
+.Signup-login h1 {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+}
+
+.Signup-login input {
+    margin-left: 43%;
+    padding: 12px;
+    color: green;     
+}
+
+.Signup-login button {
+    background-color: #333;
+    color: white;
+    margin-left: 43%;
+}
+
+.comments-container {
+    width: 38%;
+    margin-right: 2%;
+    display: block;
+}
+.comments-container h3 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 16px;
+    /*margin-bottom: 20px;*/
+}
 .comment {
-    border: double black 2px;
-    background-color: grey;
-    width: 25%;
-    border-radius: 20px 20px 20px 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #f2f2f2;
+    float: left;
+}
+.comment:last-of-type {
+    border: 0;
+}
+.posted {
+    display: block;
+    width: 100%;
+}
+.posted p {
+    display: inline;
+    font-size: 10px;
+}
+ 
+#comment {
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-align: justify;  
+}
+.write-comment textarea {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    resize: none;
+}
+.write-comment button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #ff3f3f;
+  width: 100%;
+  border: 0;
+  padding: 5px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.write-comment button:hover,.write-comment button:active,.write-comment button:focus {
+  background-color: rgba(255, 63, 63, 0.5);
+}
+ 
+ 
+#delete {
+    display: inline;
+}
+#delete button {
+    background-color: #fff;
+    border: none;
+    color: #ff3f3f;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+ 
+#delete button:hover,#delete button:active,#delete button:focus {
+  background-color: rgba(255, 63, 63, 0.2);
 }
