@@ -1,0 +1,221 @@
+@import url("reset.css");
+@import url("recipe.css");
+@import url("calendar.css");
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+
+h1, h2, p, li {
+    font-family: "Comic Sans MS";
+}
+
+body {
+    background-color: white;
+    margin: 0;
+ 
+}
+
+ul, li {
+    list-style: default;
+}
+.bgrec {
+    /* The image used */
+    background-image: url("../images/recipesbg.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.navbar {
+        font-family: "Times New Roman", Georgia, Serif; 
+        font-size: 15px;
+}
+
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+.navbar li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover, .dropdown:hover .dropbtn {
+    background-color: grey;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:  #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.index {
+    background-color: white;
+    margin: auto;
+    width: 50%;
+    border: double black 2px;
+    margin-top: 5%;
+}
+
+.index p, h1, a {
+
+    text-align: center;
+    opacity: 1;
+    color: black;
+}
+
+.Signup-login h1 {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+}
+
+.Signup-login input {
+    margin-left: 43%;
+    padding: 12px;
+    color: green;     
+}
+
+.Signup-login button {
+    background-color: #333;
+    color: white;
+    margin-left: 43%;
+}
+
+.comments-container {
+    width: 38%;
+    margin-right: 2%;
+    display: block;
+}
+.comments-container h3 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 16px;
+    /*margin-bottom: 20px;*/
+}
+.comment {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #f2f2f2;
+    float: left;
+}
+.comment:last-of-type {
+    border: 0;
+}
+.posted {
+    display: block;
+    width: 100%;
+}
+.posted p {
+    display: inline;
+    font-size: 10px;
+}
+ 
+#comment {
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-align: justify;  
+}
+.write-comment textarea {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    resize: none;
+}
+.write-comment button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #ff3f3f;
+  width: 100%;
+  border: 0;
+  padding: 5px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.write-comment button:hover,.write-comment button:active,.write-comment button:focus {
+  background-color: rgba(255, 63, 63, 0.5);
+}
+ 
+ 
+#delete {
+    display: inline;
+}
+#delete button {
+    background-color: #fff;
+    border: none;
+    color: #ff3f3f;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+ 
+#delete button:hover,#delete button:active,#delete button:focus {
+  background-color: rgba(255, 63, 63, 0.2);
+}
+
+.verticalnavbar {
+  float: left;
+  opacity: 0.3;
+}
+.verticalnavbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 568px;
+    background-color: #f1f1f1;
+}
+
+.verticalnavbar li a, p {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+.verticalnavbar li a:hover {
+    background-color: #555;
+    color: white;
+}
