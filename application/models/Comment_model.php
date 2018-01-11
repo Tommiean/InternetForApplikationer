@@ -3,30 +3,39 @@ class Comment_model extends CI_Model{
     public function __construct(){
         $this->load->Database();
     }
-    public function get_comments($slug = FALSE){
-        if($slug === FALSE){
-            $query = $this->db->get('comments');
-            return $query->result_array();
+    public function showComments(){
+        $this->db->order_by('id', 'DESC');
+        $query = $this->db->get('comments');
+        if($query->num_rows() > 0){
+            return $query->result();
+        }else{
+            return false;
         }
-        $query = $this->db->get_where('comments', array('slug' => $slug));
-        return $query->row_array();
     }
-     public function create_comment($page){
+    public function addComment(){
         $comment = htmlspecialchars($this->input->post('body'));
         $data = array(
             'username' => $this->session->userdata('username'),
             'comment' => $comment,
-            'page' => $page
+            'page'=>$this->input->post('page'),
         );
-        return $this->db->insert('comments', $data);
+        $this->db->insert('comments', $data);
+        if($this->db->affected_rows() > 0){
+            return true;
+        }else{
+            return false;
+        }
     }
-    public function delete_comment($id){
+    function delete_comment(){
+        $id = $this->input->get('id');
         $comment_query = $this->db->query("SELECT * FROM comments WHERE id = '$id'");
         if($comment_query->row(0)->username == $this->session->userdata('username')){
             $this->db->query("DELETE FROM comments WHERE id = '$id'");
-            return true;
-        }else{
-            die('You cant delete other users comments!');
+            if($this->db->affected_rows() > 0){
+                return true;
+            }else{
+                return false;
+            }
         }
     }
 }
