@@ -33,40 +33,33 @@
 </div>
 
 <br>
-<div class="comments-container">
-    <h2>Comments</h2>
-    <?php foreach($comments as $comment):
-    if($comment['page'] == 'recipes/pancakess.php'){?>
-    <div class="comment">
-        <p id="comment"><?php echo $comment['comment']; ?></p>
-        <div class="posted"><p>Posted by <?php echo $comment['username']; ?> on <?php echo $comment['time']; ?></p></div>
-    </div>
-    <?php } endforeach; ?>
-</div>
 
-<div class="comment">
+<div class="comments">
     <?php if($this->session->userdata('logged_in')) : ?>
-    <?php echo validation_errors(); ?>
-    <?php echo form_open('comments/create'); ?>
-    <?php echo 'Commenting as: '.$this->session->userdata('username'); ?>
-    <textarea class="commentingbox" name="body"></textarea>
-    <input type="hidden" name="page" value="pancakes";>
-    <button type="commentsubmit" class="commentbutton">Submit</button>
-    <?php echo form_close(); ?>
-     <?php endif; ?>
-    <h2>Comments:</h2>
-    <?php foreach($comments as $comment):
-         if($comment['page'] == 'pancakes'){?>
-    <div class="comment">
-        <?php if($this->session->userdata('username') == $comment['username']) : ?>
-        <?php echo form_open('comments/delete/'.$comment['id']); ?>
-        <button type="submit" value="Delete" class="deletecomment">Delete</button>
-        <input type="hidden" name="page" value="pancakes";>
-        <?php echo form_close(); ?>
-        <?php endif; ?>
-        <h3 class="commentusername"><?php echo $comment['username']; ?></h3>
-        <p><?php echo $comment['comment']; ?></p>
-    </div>
-    <?php } endforeach; ?>
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add a comment</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="myForm" action="<?php echo base_url() ?>comments/addComment" method="POST">
+                        
+                         <input id="foodcomment" type="hidden" name="page" value="pancakes";>
+                        <textarea name="body"></textarea>
 
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="addcomment">Add comment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <?php endif; ?>
+    <h2>Comments:</h2>
+
+    <div id="commentsarea"></div>
 </div>
