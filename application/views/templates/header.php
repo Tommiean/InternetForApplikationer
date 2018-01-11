@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/stylesheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="<?php echo base_url(); ?>/assets/js/jqueryAjax.js"></script>
 	<title>Tasty Recipe</title>
 </head>
 <body>
