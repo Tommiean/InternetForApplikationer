@@ -37,29 +37,34 @@
 </div>
 <br>
 
-<<div class="comments">
+<div class="comments">
     <?php if($this->session->userdata('logged_in')) : ?>
-    <?php echo validation_errors(); ?>
-    <?php echo form_open('comments/create'); ?>
-    <?php echo 'Commenting as: '.$this->session->userdata('username'); ?>
-    <textarea class="commentingbox" name="body"></textarea>
-    <input type="hidden" name="page" value="meatballs";>
-    <button type="submit" class="commentbutton">Comment</button>
-    <?php echo form_close(); ?>
-     <?php endif; ?>
-    <h2>Comments:</h2>
-    <?php foreach($comments as $comment):
-         if($comment['page'] == 'meatballs'){?>
-    <div class="comment">
-        <?php if($this->session->userdata('username') == $comment['username']) : ?>
-        <?php echo form_open('comments/delete/'.$comment['id']); ?>
-        <button type="submit" value="Delete" class="deletebutton">Delete</button>
-        <input type="hidden" name="page" value="meatballs";>
-        <?php echo form_close(); ?>
-        <?php endif; ?>
-        <h3 class="commentusername"><?php echo $comment['username']; ?></h3>
-        <p><?php echo $comment['comment']; ?></p>
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add a comment</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="myForm" action="<?php echo base_url() ?>comments/addComment" method="POST">
+                        
+                         <input id="foodcomment" type="hidden" name="page" value="meatballs";>
+                        <textarea name="body"></textarea>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="addcomment">Add comment</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <?php } endforeach; ?>
+
+
+    <?php endif; ?>
+    <h2>Comments:</h2>
+
+    <div id="commentsarea"></div>
+
 
 </div>
